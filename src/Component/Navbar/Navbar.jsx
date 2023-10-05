@@ -40,7 +40,7 @@ const Navbar = () => {
          </div>
          {/* navbar end */}
          <div className="navbar-end">
-            <a className="btn bg-primaryColor border-0 capitalize px-7 py-3">Login</a>
+            <Link to="/login"><a className="btn bg-primaryColor border-0 capitalize px-7 py-3">Login</a></Link>
          </div>
       </div>
    );
