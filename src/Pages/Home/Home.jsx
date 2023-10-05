@@ -1,11 +1,12 @@
+import Banner from "../../Component/Banner/Banner";
 import Navbar from "../../Component/Navbar/Navbar";
 
 
 const Home = () => {
    return (
-      <div className="bg-red-100">
+      <div>
          <Navbar></Navbar>
-         <h1>this is form home</h1>
+         <Banner></Banner>
       </div>
    );
 };
