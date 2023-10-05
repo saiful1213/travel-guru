@@ -4,7 +4,6 @@ import {FcGoogle} from 'react-icons/fc'
 import { Link } from "react-router-dom";
 
 
-
 const Register = () => {
 
    return (
@@ -35,7 +34,7 @@ const Register = () => {
                         <button className="btn bg-primaryColor capitalize">Create an account</button>
                      </div>
                   </form>
-                  <p className="text-[#000] font-medium text-center pb-6">Already have an account? <Link to="/login" className="text-primaryColor">Login</Link></p>
+                  <p className="text-[#000] font-medium text-center pb-6">Already have an account? <Link to="/login" className="text-primaryColor underline">Login</Link></p>
                </div>
             </div>
 
