@@ -1,10 +1,15 @@
 import { CgMenu } from "react-icons/cg"
 import logo from '/logo.png'
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 
 
 const Navbar2 = () => {
+
+   const { user } = useContext(AuthContext);
+   // console.log(user)
 
    const navLinks = <>
       <li className="mr-8"><NavLink to="/news">News</NavLink></li>
@@ -16,7 +21,7 @@ const Navbar2 = () => {
    return (
       <div>
          <div className="navbar md:px-32 lg:py-9 z-10">
-            
+
             {/* navbar start */}
             <div className="navbar-start">
                <div className="dropdown">
@@ -35,7 +40,11 @@ const Navbar2 = () => {
                <ul className="menu menu-horizontal px-1 flex flex-nowrap">
                   {navLinks}
                </ul>
-               <Link to="/login"><a className="btn bg-primaryColor border-0 capitalize px-7 py-3">Login</a></Link>
+               {
+                  user ?
+                     <button className="btn bg-primaryColor border-0 capitalize px-7 py-3">{user?.displayName}</button> :
+                     <Link to="/login"><button className="btn bg-primaryColor border-0 capitalize px-7 py-3">Login</button></Link>
+               }
             </div>
          </div>
       </div>
